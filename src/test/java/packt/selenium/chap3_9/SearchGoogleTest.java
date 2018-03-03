@@ -20,9 +20,9 @@ public class SearchGoogleTest {
 
     @Before
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "/Users/Shared/Selenium/Drivers/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "/Users/Shared/Selenium/Drivers/chromedriver");
 		driver = new ChromeDriver();
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
     @After
