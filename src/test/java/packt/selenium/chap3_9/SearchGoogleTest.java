@@ -3,9 +3,8 @@ package packt.selenium.chap3_9;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import packt.selenium.chap3_9.pageobjects.Google;
 import packt.selenium.chap3_9.pageobjects.GoogleSearchPage;
 
@@ -21,7 +20,8 @@ public class SearchGoogleTest {
 
     @Before
     public void setUp() throws Exception {
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "/Users/nenaderceg/Documents/Code/ProgramLibrary/Selenium/Drivers/chromedriver");
+		driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
